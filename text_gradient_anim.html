@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Animation Effect</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .gradient-text {
+        font-size: 100px;
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          45deg,
+          #470000 0%,
+          #a85b02 40%,
+          #a0c43e 60%,
+          #a866ff 80%,
+          #ffbaff 100%
+        );
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: text-animation 5s linear infinite;
+      }
+      @keyframes text-animation {
+        to {
+          background-position: 200% center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="gradient-text">CODE Wheel</h3>
+  </body>
+</html>

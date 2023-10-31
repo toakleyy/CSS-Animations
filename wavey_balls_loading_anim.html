@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Effect 6</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: #00002f;
+      }
+      .codewheel-loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .codewheel-loading > div {
+        width: 15px;
+        height: 15px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: #9fa2d3;
+        animation: codewheel-loading 0.5s infinite alternate;
+      }
+      .codewheel-loading > div:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .codewheel-loading > div:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .codewheel-loading > div:last-child {
+        animation-delay: 0.45s;
+      }
+      @keyframes codewheel-loading {
+        from {
+          transform: translateY(17px);
+        }
+        to {
+          opacity: 0.1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="codewheel-loading">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

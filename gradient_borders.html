@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box With Gradient Border</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .codewheel-gradient-border {
+        width: 200px;
+        height: auto;
+        position: relative;
+        background-clip: padding-box;
+        border: 5px solid transparent;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .codewheel-gradient-border::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        margin: -5px;
+        background-image: linear-gradient(
+          40deg,
+          #6a5af9 10%,
+          #f62682 50%,
+          #e6c300 80%,
+          #ff16f3 100%
+        );
+        border-radius: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="codewheel-gradient-border">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta neque
+      expedita, esse perferendis quam sapiente aut quae sed ipsa ea corporis
+      totam at ut aliquid omnis laborum necessitatibus vero amet!
+    </div>
+  </body>
+</html>
